@@ -9,10 +9,10 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const UserBlocked = new Set();
-const prefix = '%'
+const prefix = '2'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame("Magnisive | %bc", "https://www.twitch.tv/idk");
+  client.user.setGame("server shgamer", "https://www.twitch.tv/idk");
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -58,9 +58,9 @@ client.on("guildMemberAdd", member => {
 
 
 client.on('message',async message => {
-  if(message.author.bot || message.channel.type === '%bc') return;
+  if(message.author.bot || message.channel.type === '2bc') return;
   let args = message.content.split(' ');
-  if(args[0] === `%bc`) {
+  if(args[0] === `2bc`) {
     if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('- **أنت لا تملك الصلاحيات اللازمة لأستخدام هذا الأمر**');
     if(!args[1]) return message.channel.send('- **يجب عليك كتابة الرسالة بعد الأمر**');
 
